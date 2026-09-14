@@ -1,4 +1,15 @@
 <!-- prettier-ignore-start -->
+## SAINCE Customizations
+### Building for dev
+```angular2html
+nvm use 24
+source ~/bin/initSaince
+pnpm install
+pnpm run build
+cd mocSaince/saince-ohif
+npm install
+npm run wdev
+```
 <div align="center">
   <h1>OHIF Medical Imaging Viewer</h1>
   <p><strong>The OHIF Viewer</strong> is a zero-footprint medical image viewer

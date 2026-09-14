@@ -5,6 +5,7 @@ const fs = require('fs');
 const { merge } = require('webpack-merge');
 const rspack = require('@rspack/core');
 const webpackBase = require('./../../../.webpack/webpack.base.js');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // ~~ Directories
 const SRC_DIR = path.join(__dirname, '../src');
 const DIST_DIR = path.join(__dirname, '../dist');
