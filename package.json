@@ -9,7 +9,7 @@
   "scripts": {
     "preinstall": "node preinstall.js",
     "cm": "npx git-cz",
-    "build": "pnpm --filter @ohif/app run build:viewer",
+    "build": "cross-env PUBLIC_URL=/ohifViewer/ APP_CONFIG=config/myPacs.js pnpm --filter @ohif/app run build:viewer",
     "build:dev": "pnpm --filter @ohif/app run build:dev",
     "build:ci": "pnpm --filter @ohif/app run build:viewer:ci",
     "build:qa": "pnpm --filter @ohif/app run build:viewer:qa",
