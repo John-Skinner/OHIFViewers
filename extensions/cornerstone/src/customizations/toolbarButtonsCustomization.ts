@@ -644,12 +644,12 @@ const toolbarButtons: Button[] = [
     },
   },
   {
-    id: 'Crosshairs',
+    id: 'WorldCrosshair',
     uiType: 'ohif.toolButton',
     props: {
       type: 'tool',
       icon: 'tool-crosshair',
-      label: i18n.t('Buttons:Crosshairs'),
+      label: 'World Crosshair',
       tooltip: i18n.t('Buttons:Click to toggle on or off'),
       commands: {
         commandName: 'toggleActiveDisabledToolbar',
@@ -662,6 +662,28 @@ const toolbarButtons: Button[] = [
         disabledText: i18n.t('Buttons:Select an MPR viewport to enable this tool'),
         toggledOnIcon: 'tool-crosshair-checked',
         defaultIcon: 'tool-crosshair',
+      },
+    },
+  },
+  {
+    id: 'SliceIntersection',
+    uiType: 'ohif.toolButton',
+    props: {
+      type: 'tool',
+      icon: 'tool-slice-intersection',
+      label: 'Slice Intersection',
+      tooltip: 'slice intersection',
+      commands: {
+        commandName: 'toggleActiveDisabledToolbar',
+        commandOptions: {
+          toolGroupIds: ['mpr'],
+        },
+      },
+      evaluate: {
+        name: 'evaluate.cornerstoneTool.toggleWithModifier',
+        disabledText: i18n.t('Buttons:Select an MPR viewport to enable this tool'),
+        toggledOnIcon: 'tool-crosshair-checked',
+        defaultIcon: 'tool-slice-intersection',
       },
     },
   },
@@ -725,7 +747,8 @@ export const toolbarSections = {
     'WindowLevel',
     'Capture',
     'Layout',
-    'Crosshairs',
+    'WorldCrosshair',
+    'SliceIntersection',
     'MoreTools',
   ],
 

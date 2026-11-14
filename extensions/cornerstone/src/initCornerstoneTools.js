@@ -45,6 +45,8 @@ import {
   SculptorTool,
   SplineContourSegmentationTool,
   LabelMapEditWithContourTool,
+  SliceIntersectionTool,
+  WorldCrosshairTool
 } from '@cornerstonejs/tools';
 import { LabelmapSlicePropagationTool, MarkerLabelmapTool } from '@cornerstonejs/ai';
 import * as polySeg from '@cornerstonejs/polymorphic-segmentation';
@@ -56,6 +58,8 @@ import ImageOverlayViewerTool from './tools/ImageOverlayViewerTool';
 export default function initCornerstoneTools(configuration = {}) {
   CrosshairsTool.isAnnotation = false;
   LabelmapSlicePropagationTool.isAnnotation = false;
+  WorldCrosshairTool.isAnnotation = false;
+  SliceIntersectionTool.isAnnotation = false;
   MarkerLabelmapTool.isAnnotation = false;
   ReferenceLinesTool.isAnnotation = false;
   AdvancedMagnifyTool.isAnnotation = false;
@@ -119,6 +123,8 @@ export default function initCornerstoneTools(configuration = {}) {
   addTool(SculptorTool);
   addTool(SplineContourSegmentationTool);
   addTool(LabelMapEditWithContourTool);
+  addTool(SliceIntersectionTool);
+  addTool(WorldCrosshairTool);
   // Modify annotation tools to use dashed lines on SR
   const annotationStyle = {
     textBoxFontSize: '15px',
@@ -155,6 +161,8 @@ const toolNames = {
   CobbAngle: CobbAngleTool.toolName,
   Magnify: MagnifyTool.toolName,
   Crosshairs: CrosshairsTool.toolName,
+  WorldCrosshair: WorldCrosshairTool.toolName,
+  SliceIntersection: SliceIntersectionTool.toolName,
   Brush: BrushTool.toolName,
   PaintFill: PaintFillTool.toolName,
   ReferenceLines: ReferenceLinesTool.toolName,

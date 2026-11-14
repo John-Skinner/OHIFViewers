@@ -236,7 +236,7 @@ function initMPRToolGroup(extensionManager, toolGroupService, commandsManager) {
     ],
     disabled: [
       {
-        toolName: toolNames.Crosshairs,
+        toolName: toolNames.WorldCrosshair,
         bindings: [
           { mouseButton: Enums.MouseBindings.Primary, modifierKey: Enums.KeyboardBindings.Shift },
         ],
@@ -266,6 +266,8 @@ function initMPRToolGroup(extensionManager, toolGroupService, commandsManager) {
             }
           },
         },
+      },
+      { toolName: toolNames.SliceIntersection,
       },
       {
         toolName: toolNames.AdvancedMagnify,
