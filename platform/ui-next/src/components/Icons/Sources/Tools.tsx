@@ -929,6 +929,74 @@ export const ToolCrosshair = (props: IconProps) => (
     </g>
   </svg>
 );
+export const ToolSliceIntersection = (props: IconProps) => (
+  <svg
+    width="28px"
+    height="28px"
+    viewBox="0 0 28 28"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g
+      id="tool-slice-intersection"
+      stroke="none"
+      strokeWidth="1"
+      fill="none"
+      fillRule="evenodd"
+    >
+      <rect
+        id="Rectangle"
+        x="0"
+        y="0"
+        width="28"
+        height="28"
+      ></rect>
+      <g
+        id="cursor-target-2"
+        transform="translate(3.3)"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+      >
+        <line
+          x1="15"
+          y1="1"
+          x2="13"
+          y2="7"
+          id="Path"
+        ></line>
+        <line
+          x1="0"
+          y1="11"
+          x2="6"
+          y2="11"
+          id="Path"
+        ></line>
+        <line
+          x1="7"
+          y1="22"
+          x2="9"
+          y2="16"
+          id="Path"
+        ></line>
+        <line
+          x1="22"
+          y1="11"
+          x2="16"
+          y2="11"
+          id="Path"
+        ></line>
+        <circle
+          id="Oval"
+          cx="11.0"
+          cy="11.0"
+          r="2"
+        ></circle>
+      </g>
+    </g>
+  </svg>
+);
 
 export const ToolCrosshairChecked = (props: IconProps) => (
   <svg

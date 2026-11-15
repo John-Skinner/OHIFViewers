@@ -21,6 +21,9 @@ window.config = {
     bootstrap: { 'cornerstone.gpuSettingsPreset': 'medium' },
     global: ['@ohif/extension-default.customizationModule.theme'],
   },
+  genericViewports: {
+    enabled: true
+  },
 
   // URL-driven customizations (?customization=). The `default` prefix (no
   // slashes) is used for values without a leading slash; every other prefix

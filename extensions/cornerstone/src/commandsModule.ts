@@ -1573,13 +1573,15 @@ function commandsModule({
       const crosshairInstances = [];
 
       const getCrosshairInstances = toolGroupId => {
+        const crosshairtType= 'WorldCrosshair';
+
         const toolGroup = toolGroupService.getToolGroup(toolGroupId);
         // Only fetch the instance when Crosshairs is registered in this tool
         // group. getToolInstance logs a warning for an unregistered tool, and a
         // viewport's default tool group does not always include Crosshairs (e.g.
         // next viewports), which made Reset Viewport log a spurious warning.
-        if (toolGroup?.hasTool('Crosshairs')) {
-          crosshairInstances.push(toolGroup.getToolInstance('Crosshairs'));
+        if (toolGroup?.hasTool(crosshairtType)) {
+          crosshairInstances.push(toolGroup.getToolInstance(crosshairtType));
         }
       };
 
